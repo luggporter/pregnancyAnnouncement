@@ -8,7 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist  # GitHub Actions에서 자동 빌드하므로 제외
 dist-ssr
 *.local
 
