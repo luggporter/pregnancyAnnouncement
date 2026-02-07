@@ -23,7 +23,7 @@ type LoadingStep = 'initial' | 'loading1' | 'loading2' | 'loading3' | 'complete'
 
 function App() {
   const [loadingStep, setLoadingStep] = useState<LoadingStep>('initial')
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onClose } = useDisclosure()
 
   useEffect(() => {
     // 처음 접속시 모달 표시
