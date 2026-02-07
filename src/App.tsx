@@ -18,7 +18,6 @@ import theme from './theme'
 import LottoResultScreen from './components/LottoResultScreen'
 import loading1Data from './loading1.json'
 import loading2Data from './loading2.json'
-import ultrasoundVideo from '../public/초음파.mp4'
 
 type LoadingStep = 'initial' | 'loading1' | 'loading2' | 'loading3' | 'complete'
 
@@ -174,7 +173,7 @@ function App() {
               objectFit: 'cover'
             }}
           >
-            <source src={ultrasoundVideo} type="video/mp4" />
+            <source src={import.meta.env.PROD ? "/pregnancyAnnouncement/초음파.mp4" : "/초음파.mp4"} type="video/mp4" />
             브라우저가 비디오 태그를 지원하지 않습니다.
           </video>
         </Box>
