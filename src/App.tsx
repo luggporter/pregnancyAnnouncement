@@ -32,13 +32,9 @@ function App() {
   }, [])
 
   const handleInitial = () => {
-    setLoadingStep('loading1')
     setTimeout(() => {
-      setLoadingStep('initial')
-      setTimeout(() => {
-        onOpen()
-      }, 4000)
-    }, 3000)
+      handleRefresh()
+    }, 1000)
   }
 
   const handleRefresh = () => {
@@ -55,10 +51,10 @@ function App() {
         // 3초 후 최종 화면으로 전환
         setTimeout(() => {
           setLoadingStep('complete')
-        }, 4000)
-      }, 5000)
+        }, 3000)
+      }, 2000)
 
-    }, 5000)
+    }, 2000)
   }
 
   const renderLoadingScreen = () => {
@@ -95,7 +91,7 @@ function App() {
             🎉 당첨되셨습니다!! 🎉
           </Text>
           <Text fontSize="xl" color="black" fontWeight="bold" textAlign="center">
-            축하합니다! 1등에 당첨되셨습니다!
+            축하합니다!
           </Text>
         </VStack>
       )
@@ -141,7 +137,7 @@ function App() {
             textAlign={'center'}
             textShadow="0 2px 4px rgba(0,0,0,0.5)"
           >
-            할아버지, 할머니가<br />되신 것을 축하합니다!!
+            이모 할머니가<br />되신 것을 축하합니다!!
           </Text>
         </VStack>
       )

@@ -202,13 +202,14 @@ export default function LottoResultScreen() {
           textAlign="center"
         >
           <Text fontSize="20px" fontWeight="900" mb="6px">
-            축하합니다!
+            데이터를 조회중입니다.
           </Text>
 
           <Text fontSize="18px" fontWeight="800">
             총{" "}
             <Text as="span" color={main} fontWeight="900">
-              {draw.total}
+              {/* {draw.total} */}
+              -
             </Text>{" "}
             당첨
           </Text>
@@ -242,7 +243,7 @@ export default function LottoResultScreen() {
             <Text fontWeight="800">A</Text>
 
             <Flex align="center" gap="12px">
-              <Text fontWeight="900">1등당첨</Text>
+              <Text fontWeight="900">데이터 조회중...</Text>
               <Flex align="center" gap="6px">
                 {draw.numbers.slice(0, 5).map((b) => (
                   <Circle
